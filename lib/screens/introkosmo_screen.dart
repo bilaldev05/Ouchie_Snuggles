@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ouchie_snuggles/config/theme.dart';
+import 'package:ouchie_snuggles/widgets/intro_header.dart';
 
 import 'package:ouchie_snuggles/widgets/start_button.dart';
 
@@ -68,114 +69,7 @@ class _IntroKosmoScreenState extends State<IntroKosmoScreen>
     return Scaffold(
       body: Stack(
         children: [
-          // Background structure
-          Positioned.fill(
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: Stack(
-                    children: [
-                      // --- Purple Background ---
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.primary,
-                          borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(120),
-                            bottomRight: Radius.circular(120),
-                          ),
-                        ),
-                      ),
-
-                      Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Transform.translate(
-                          offset: const Offset(0, 350), // push down
-                          child: Transform.scale(
-                            scale: 2.1, // 🔥 increase size
-                            child: Image.asset(
-                              "lib/assets/images/intro_bg.png",
-                              fit: BoxFit.cover,
-                              alignment: Alignment.bottomCenter,
-                            ),
-                          ),
-                        ),
-                      ),
-
-                      // --- Clouds ---
-                      AnimatedBuilder(
-                        animation: cloudAnim,
-                        builder: (_, child) {
-                          return Positioned(
-                            left: 0 + cloudAnim.value,
-                            top: 40,
-                            child: child!,
-                          );
-                        },
-                        child: Image.asset(
-                          "lib/assets/images/cloud.png",
-                          width: 120,
-                        ),
-                      ),
-                      AnimatedBuilder(
-                        animation: cloudAnim,
-                        builder: (_, child) {
-                          return Positioned(
-                            right: 0 + cloudAnim.value,
-                            top: 60,
-                            child: child!,
-                          );
-                        },
-                        child: Image.asset(
-                          "lib/assets/images/cloud1.png",
-                          width: 120,
-                        ),
-                      ),
-
-                      // --- Title ---
-                      Align(
-                        alignment: Alignment.topCenter,
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 40),
-                          child: Stack(
-                            children: [
-                              Text(
-                                "Ouchie\nSnuggles",
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.cherryBombOne(
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1.5,
-                                  foreground: Paint()
-                                    ..style = PaintingStyle.stroke
-                                    ..strokeWidth = 6
-                                    ..color = AppColors.brandYellow,
-                                ),
-                              ),
-                              Text(
-                                "Ouchie\nSnuggles",
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.cherryBombOne(
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1.5,
-                                  color: AppColors.brandYellowLight,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                // White bottom section
-                Expanded(flex: 4, child: Container(color: Colors.white)),
-              ],
-            ),
-          ),
-
+          IntroHeader(cloudAnim: cloudAnim, fadeAnim: _fadeController),
           // --- Toby character bounce-in ---
           ScaleTransition(
             scale: CurvedAnimation(

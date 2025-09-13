@@ -1,51 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ouchie_snuggles/config/theme.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class SetPinCodeScreen extends StatelessWidget {
+class SetPinCodeScreen extends StatefulWidget {
   const SetPinCodeScreen({super.key});
+
+  @override
+  State<SetPinCodeScreen> createState() => _SetPinCodeScreenState();
+}
+
+class _SetPinCodeScreenState extends State<SetPinCodeScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _fadeAnim;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    )..forward();
+
+    _fadeAnim = CurvedAnimation(parent: _controller, curve: Curves.easeIn);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: theme.colorScheme.primary, // Purple gradient base color
+      backgroundColor: theme.colorScheme.primary,
       body: Column(
         children: [
-          // Logo Title
           Align(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.center,
             child: Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: Stack(
-                children: [
-                  Text(
-                    "Ouchie\nSnuggles",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.cherryBombOne(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.5,
-                      foreground: Paint()
-                        ..style = PaintingStyle.stroke
-                        ..strokeWidth = 6
-                        ..color = AppColors.brandYellowDark,
-                    ),
-                  ),
-                  Text(
-                    "Ouchie\nSnuggles",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.cherryBombOne(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.5,
-                      color: AppColors.brandYellowLight,
-                    ),
-                  ),
-                ],
+              padding: const EdgeInsets.only(top: 40),
+              child: FadeTransition(
+                opacity: _fadeAnim,
+                child: Image.asset(
+                  "lib/assets/images/logo.png",
+                  width: 140,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           ),
@@ -55,7 +62,7 @@ class SetPinCodeScreen extends StatelessWidget {
           // White rounded container
           Container(
             width: double.infinity,
-            constraints: const BoxConstraints(maxHeight: 700),
+            constraints: const BoxConstraints(maxHeight: 720),
             padding: const EdgeInsets.all(24),
             decoration: const BoxDecoration(
               color: Colors.white,
@@ -175,9 +182,11 @@ class SetPinCodeScreen extends StatelessWidget {
                 // Set PIN Button
                 SizedBox(
                   width: double.infinity,
-                  height: 56,
+                  height: 50,
                   child: OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.go('/grownupmode');
+                    },
                     style: OutlinedButton.styleFrom(
                       side: BorderSide(color: AppColors.secondary, width: 2),
                       foregroundColor: AppColors.secondary,

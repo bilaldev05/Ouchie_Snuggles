@@ -75,7 +75,7 @@ class _SplashScreenState extends State<SplashScreen>
             ),
           ),
 
-          // Bottom cloud (fills bottom area)
+          // Bottom cloud
           Positioned(
             bottom: 0,
             left: 0,
@@ -89,43 +89,23 @@ class _SplashScreenState extends State<SplashScreen>
             ),
           ),
 
+          // Center logo + tagline
           Center(
             child: FadeTransition(
               opacity: _fadeIn,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Stack(
-                    children: [
-                      Text(
-                        "Ouchie\nSnuggles",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.cherryBombOne(
-                          fontSize: 46,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 8,
-                          foreground: Paint()
-                            ..style = PaintingStyle.stroke
-                            ..strokeWidth = 6
-                            ..color = AppColors.brandYellow,
-                        ),
-                      ),
-
-                      Text(
-                        "Ouchie\nSnuggles",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.cherryBombOne(
-                          fontSize: 46,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 8,
-                          color: AppColors.brandYellowLight,
-                        ),
-                      ),
-                    ],
+                  // Logo image
+                  Image.asset(
+                    "lib/assets/images/logo.png",
+                    width: 180,
+                    fit: BoxFit.contain,
                   ),
 
                   const SizedBox(height: 20),
 
+                  // Tagline with stroke + fill
                   Stack(
                     children: [
                       Text(
@@ -134,21 +114,20 @@ class _SplashScreenState extends State<SplashScreen>
                         style: GoogleFonts.rem(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
-                          letterSpacing: 4,
+                          letterSpacing: 2,
                           foreground: Paint()
                             ..style = PaintingStyle.stroke
-                            ..strokeWidth = 2.0
+                            ..strokeWidth = 2
                             ..color = AppColors.brandYellow,
                         ),
                       ),
-                      // Fill (white inside)
                       Text(
                         "Real comfort for little\nbumps and big feelings.",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.rem(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
-                          letterSpacing: 4,
+                          letterSpacing: 2,
                           color: Colors.white,
                         ),
                       ),

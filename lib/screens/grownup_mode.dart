@@ -4,14 +4,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ouchie_snuggles/config/theme.dart';
 import 'package:ouchie_snuggles/widgets/auth_tile.dart';
 
-class GrownUpScreen extends StatefulWidget {
-  const GrownUpScreen({super.key});
+class GrownUpModeScreen extends StatefulWidget {
+  const GrownUpModeScreen({super.key});
 
   @override
-  State<GrownUpScreen> createState() => _GrownUpScreenState();
+  State<GrownUpModeScreen> createState() => _GrownUpModeScreenState();
 }
 
-class _GrownUpScreenState extends State<GrownUpScreen>
+class _GrownUpModeScreenState extends State<GrownUpModeScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _fadeAnim;
@@ -98,12 +98,12 @@ class _GrownUpScreenState extends State<GrownUpScreen>
                       // ✅ Call your widget here
                       AuthOptionTile(
                         svgIconPath: "lib/assets/icons/keypad.svg",
-                        title: "Set up PIN code",
+                        title: "Enter Pin ",
                         subtitle: "Use your 4-digit security code",
                         arrowAsset: "lib/assets/icons/arrow_blue.svg",
                         arrowColor: AppColors.info,
                         onTap: () {
-                          context.go('/pincode');
+                          context.go('/enterpin');
                         },
                       ),
 

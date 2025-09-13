@@ -11,7 +11,11 @@ class AppColors {
   // Accent Brand Colors (for titles like "Ouchie Snuggles")
   static const Color brandYellowDark = Color(0xFFFBC02D); // outline
   static const Color brandYellowLight = Color(0xFFFFF59D); // fill
-  static const Color brandYellow = Color(0xFFFFEB3B); // main (can still use)
+  static const Color brandYellow = Color(0xFFFFEB3B); // main
+  static const Color accent = brandYellow;
+
+  // Extra Palette
+  static const Color pink300 = Color(0xFFF06292); // ✅ Pink-300
 
   // Secondary Palette
   static const Color error = Color(0xFFFF3B3B);
@@ -53,7 +57,7 @@ class AppTheme {
         fontSize: 48,
         fontWeight: FontWeight.bold,
         color: AppColors.brandYellowLight,
-        shadows: [
+        shadows: const [
           Shadow(
             blurRadius: 6,
             offset: Offset(2, 2),
