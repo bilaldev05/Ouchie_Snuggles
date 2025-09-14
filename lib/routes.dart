@@ -1,4 +1,9 @@
 import 'package:go_router/go_router.dart';
+import 'package:ouchie_snuggles/screens/article_screen.dart';
+import 'package:ouchie_snuggles/screens/book_selection.dart';
+import 'package:ouchie_snuggles/screens/character_selection.dart';
+import 'package:ouchie_snuggles/screens/child_profile.dart';
+import 'package:ouchie_snuggles/screens/coloring_selection.dart';
 import 'package:ouchie_snuggles/screens/enterpin_screen.dart';
 import 'package:ouchie_snuggles/screens/grownup_mode.dart';
 import 'package:ouchie_snuggles/screens/grownup_screen.dart';
@@ -7,15 +12,22 @@ import 'package:ouchie_snuggles/screens/intro_screen.dart';
 import 'package:ouchie_snuggles/screens/introkosmo_screen.dart';
 import 'package:ouchie_snuggles/screens/introlilly_screen.dart';
 import 'package:ouchie_snuggles/screens/introtulip_screen.dart';
+import 'package:ouchie_snuggles/screens/journey_screen.dart';
+import 'package:ouchie_snuggles/screens/kidsdashboard.dart';
+import 'package:ouchie_snuggles/screens/lesson_complete.dart';
 import 'package:ouchie_snuggles/screens/logcap_screen.dart';
 import 'package:ouchie_snuggles/screens/manage_cap_screen.dart';
 import 'package:ouchie_snuggles/screens/math_problem_screen.dart';
+import 'package:ouchie_snuggles/screens/otp_verification.dart';
+import 'package:ouchie_snuggles/screens/parent_signup.dart';
+import 'package:ouchie_snuggles/screens/parent_verification.dart';
 import 'package:ouchie_snuggles/screens/pincode_screen.dart';
 import 'package:ouchie_snuggles/screens/registercap_screen.dart';
 import 'package:ouchie_snuggles/screens/registeredcap_screen.dart';
 import 'package:ouchie_snuggles/screens/reminders_screen.dart';
 
 import 'package:ouchie_snuggles/screens/splash_screen.dart';
+import 'package:ouchie_snuggles/screens/story_screen.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
@@ -75,6 +87,51 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: '/managecap',
       builder: (context, state) => const ManageCapScreen(),
+    ),
+    GoRoute(
+      path: '/article',
+      builder: (context, state) => const ArticleDetailScreen(),
+    ),
+    GoRoute(
+      path: '/parent',
+      builder: (context, state) => const ParentSignUpScreen(),
+    ),
+    GoRoute(
+      path: '/parentverification',
+      builder: (context, state) => const ParentVerificationScreen(),
+    ),
+    GoRoute(
+      path: '/otp',
+      builder: (context, state) => const OtpVerificationScreen(),
+    ),
+    GoRoute(
+      path: '/child',
+      builder: (context, state) => const ChildProfileScreen(),
+    ),
+    GoRoute(
+      path: '/selection',
+      builder: (context, state) => const CharacterSelectionScreen(),
+    ),
+    GoRoute(
+      path: '/kids',
+      builder: (context, state) => const KidsDashboardScreen(),
+    ),
+    GoRoute(
+      path: '/journey',
+      builder: (context, state) => const JourneyScreen(),
+    ),
+    GoRoute(
+      path: '/book',
+      builder: (context, state) => const BookSelectionScreen(),
+    ),
+    GoRoute(path: '/story', builder: (context, state) => const StoryScreen()),
+    GoRoute(
+      path: '/lesson',
+      builder: (context, state) => const LessonCompleteScreen(),
+    ),
+    GoRoute(
+      path: '/coloring',
+      builder: (context, state) => const ColoringSelectionScreen(),
     ),
   ],
 );

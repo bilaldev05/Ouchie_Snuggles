@@ -115,7 +115,9 @@ class _GrownUpScreenState extends State<GrownUpScreen>
                         subtitle: "Quick and secure verification",
                         arrowAsset: "lib/assets/icons/arrow_purple.svg",
                         arrowColor: AppColors.primary,
-                        onTap: () {},
+                        onTap: () {
+                          context.go('/parent');
+                        },
                       ),
 
                       const SizedBox(height: 16),

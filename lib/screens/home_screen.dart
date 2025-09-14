@@ -224,7 +224,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   InkWell(
                     onTap: () {
-                      // TODO: Navigate or perform action
+                      context.go('/article');
                     },
                     borderRadius: BorderRadius.circular(16),
                     child: const _ArticleCard(
