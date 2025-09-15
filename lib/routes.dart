@@ -3,6 +3,7 @@ import 'package:ouchie_snuggles/screens/article_screen.dart';
 import 'package:ouchie_snuggles/screens/book_selection.dart';
 import 'package:ouchie_snuggles/screens/character_selection.dart';
 import 'package:ouchie_snuggles/screens/child_profile.dart';
+import 'package:ouchie_snuggles/screens/coloring_screen.dart';
 import 'package:ouchie_snuggles/screens/coloring_selection.dart';
 import 'package:ouchie_snuggles/screens/enterpin_screen.dart';
 import 'package:ouchie_snuggles/screens/grownup_mode.dart';
@@ -25,9 +26,12 @@ import 'package:ouchie_snuggles/screens/pincode_screen.dart';
 import 'package:ouchie_snuggles/screens/registercap_screen.dart';
 import 'package:ouchie_snuggles/screens/registeredcap_screen.dart';
 import 'package:ouchie_snuggles/screens/reminders_screen.dart';
+import 'package:ouchie_snuggles/screens/reward_screen.dart';
 
 import 'package:ouchie_snuggles/screens/splash_screen.dart';
 import 'package:ouchie_snuggles/screens/story_screen.dart';
+import 'package:ouchie_snuggles/screens/storyplayer_screen.dart';
+import 'package:ouchie_snuggles/screens/storyvideos_screen.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
@@ -133,5 +137,18 @@ final GoRouter appRouter = GoRouter(
       path: '/coloring',
       builder: (context, state) => const ColoringSelectionScreen(),
     ),
+    GoRoute(
+      path: '/color',
+      builder: (context, state) => const ColoringScreen(),
+    ),
+    GoRoute(
+      path: '/videos',
+      builder: (context, state) => const StoryVideosScreen(),
+    ),
+    GoRoute(
+      path: '/player',
+      builder: (context, state) => const StoryPlayerScreen(),
+    ),
+    GoRoute(path: '/reward', builder: (context, state) => const RewardScreen()),
   ],
 );

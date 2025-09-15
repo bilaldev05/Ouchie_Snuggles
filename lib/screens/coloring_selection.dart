@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ColoringSelectionScreen extends StatelessWidget {
   const ColoringSelectionScreen({super.key});
@@ -54,10 +55,26 @@ class ColoringSelectionScreen extends StatelessWidget {
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
                 children: [
-                  Image.asset("lib/assets/images/elephant.png"),
-                  Image.asset("lib/assets/images/horse.png"),
-                  Image.asset("lib/assets/images/sheep.png"),
-                  Image.asset("lib/assets/images/elephant.png"),
+                  GestureDetector(
+                    onTap: () {
+                      context.go('/color');
+                    },
+                    child: Image.asset("lib/assets/images/elephant.png"),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      context.go('/color');
+                    },
+                    child: Image.asset("lib/assets/images/horse.png"),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Image.asset("lib/assets/images/sheep.png"),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Image.asset("lib/assets/images/elephant.png"),
+                  ),
                 ],
               ),
             ),

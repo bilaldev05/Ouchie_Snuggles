@@ -179,7 +179,12 @@ class JourneyScreen extends StatelessWidget {
                           context.go('/coloring');
                         },
                       ),
-                      _buildActionButton("lib/assets/images/camera.png"),
+                      _buildActionButton(
+                        "lib/assets/images/camera.png",
+                        onTap: () {
+                          context.go('/videos');
+                        },
+                      ),
                     ],
                   ),
                 ),
