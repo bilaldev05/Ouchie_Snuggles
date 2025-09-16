@@ -55,7 +55,6 @@ class _ManageCapScreenState extends State<ManageCapScreen> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // Cap Info Card
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
@@ -64,7 +63,6 @@ class _ManageCapScreenState extends State<ManageCapScreen> {
             ),
             child: Row(
               children: [
-                // Dog Image
                 SizedBox(
                   height: 120,
                   width: 120,
@@ -72,7 +70,6 @@ class _ManageCapScreenState extends State<ManageCapScreen> {
                 ),
                 const SizedBox(width: 4),
 
-                // Texts
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -170,7 +167,6 @@ class _ManageCapScreenState extends State<ManageCapScreen> {
           ),
           const SizedBox(height: 16),
 
-          // Cap Stats
           _whiteSection(
             title: "Cap Stats",
             colorScheme: colorScheme,
@@ -186,7 +182,6 @@ class _ManageCapScreenState extends State<ManageCapScreen> {
           ),
           const SizedBox(height: 52),
 
-          // Buttons
           SizedBox(
             width: 100,
             height: 50,
@@ -236,13 +231,10 @@ class _ManageCapScreenState extends State<ManageCapScreen> {
 
   Widget _infoStat(String title, String value, ColorScheme colorScheme) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 8,
-        vertical: 6,
-      ), // smaller padding
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
       decoration: BoxDecoration(
         color: colorScheme.surfaceVariant,
-        borderRadius: BorderRadius.circular(8), // smaller radius
+        borderRadius: BorderRadius.circular(8),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -271,29 +263,26 @@ class _ManageCapScreenState extends State<ManageCapScreen> {
   Widget _usageBox(String title, String value, ColorScheme colorScheme) {
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 8,
-          vertical: 6,
-        ), // reduced padding
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
         decoration: BoxDecoration(
           color: colorScheme.surfaceVariant,
-          borderRadius: BorderRadius.circular(8), // smaller radius
+          borderRadius: BorderRadius.circular(8),
         ),
         child: Column(
           children: [
             Text(
               title,
               style: GoogleFonts.poppins(
-                fontSize: 10, // reduced
+                fontSize: 10,
                 color: colorScheme.onSurface.withOpacity(0.7),
               ),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 4), // reduced spacing
+            const SizedBox(height: 4),
             Text(
               value,
               style: GoogleFonts.poppins(
-                fontSize: 12, // reduced
+                fontSize: 12,
                 fontWeight: FontWeight.w600,
                 color: colorScheme.onSurface,
               ),
@@ -334,7 +323,6 @@ class _ManageCapScreenState extends State<ManageCapScreen> {
   }
 }
 
-// Delete dialog
 Future<bool?> showDeleteCapDialog(
   BuildContext context,
   ColorScheme colorScheme,
@@ -352,15 +340,13 @@ Future<bool?> showDeleteCapDialog(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // Dog Illustration
               Image.asset(
-                "lib/assets/images/toby.png", // replace with correct asset if needed
+                "lib/assets/images/toby.png",
                 height: 120,
                 width: 120,
               ),
               const SizedBox(height: 16),
 
-              // Title
               Text(
                 "Tell us why you are deleting this cap?",
                 textAlign: TextAlign.center,
@@ -372,7 +358,6 @@ Future<bool?> showDeleteCapDialog(
               ),
               const SizedBox(height: 6),
 
-              // Subtitle
               Text(
                 "Your feedback will help us improve our product",
                 textAlign: TextAlign.center,
@@ -383,7 +368,6 @@ Future<bool?> showDeleteCapDialog(
               ),
               const SizedBox(height: 20),
 
-              // Reason Buttons (2 column grid)
               GridView.count(
                 shrinkWrap: true,
                 crossAxisCount: 2,
@@ -400,7 +384,6 @@ Future<bool?> showDeleteCapDialog(
               ),
               const SizedBox(height: 20),
 
-              // Comments Box
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -437,13 +420,12 @@ Future<bool?> showDeleteCapDialog(
               ),
               const SizedBox(height: 20),
 
-              // Delete Button
               SizedBox(
                 width: 250,
                 height: 40,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pop(context, true); // return true on delete
+                    Navigator.pop(context, true);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.error,
@@ -464,7 +446,6 @@ Future<bool?> showDeleteCapDialog(
               ),
               const SizedBox(height: 10),
 
-              // Cancel
               GestureDetector(
                 onTap: () => Navigator.pop(context, false),
                 child: Text(
@@ -484,7 +465,6 @@ Future<bool?> showDeleteCapDialog(
   );
 }
 
-// Helper widget for reason chips
 Widget _reasonChip(String text, ColorScheme colorScheme) {
   return Container(
     decoration: BoxDecoration(

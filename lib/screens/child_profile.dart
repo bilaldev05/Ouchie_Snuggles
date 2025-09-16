@@ -31,7 +31,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // 🔹 Logo Banner
             Align(
               alignment: Alignment.center,
               child: Padding(
@@ -79,7 +78,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                       ),
                       const SizedBox(height: 16),
 
-                      // Stepper
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -107,7 +105,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                       ),
                       const SizedBox(height: 32),
 
-                      // Form Title
                       Text(
                         "Tell us about your little one",
                         style: GoogleFonts.poppins(
@@ -118,7 +115,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                       ),
                       const SizedBox(height: 16),
 
-                      // Child Name
                       Text(
                         "Child’s Name",
                         style: GoogleFonts.poppins(
@@ -131,11 +127,10 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                       _buildTextField(
                         controller: nameController,
                         icon: Icons.person,
-                        hint: "Enter child’s full name", // 👈 hint text
+                        hint: "Enter child’s full name",
                       ),
                       const SizedBox(height: 16),
 
-                      // Date of Birth
                       Text(
                         "Date of Birth",
                         style: GoogleFonts.poppins(
@@ -153,7 +148,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
 
                       const SizedBox(height: 20),
 
-                      // Gender
                       Text(
                         "Gender",
                         style: GoogleFonts.poppins(
@@ -176,7 +170,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                       ),
                       const SizedBox(height: 20),
 
-                      // Basic Health Info
                       Text(
                         "Basic Health Information",
                         style: GoogleFonts.poppins(
@@ -204,7 +197,7 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                                 _buildTextField(
                                   controller: weightController,
                                   icon: Icons.monitor_weight,
-                                  hint: "Enter weight", // 👈 hint text inside
+                                  hint: "Enter weight",
                                   keyboardType: TextInputType.number,
                                 ),
                               ],
@@ -227,7 +220,7 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                                 _buildTextField(
                                   controller: heightController,
                                   icon: Icons.height,
-                                  hint: "Enter height", // 👈 hint text inside
+                                  hint: "Enter height",
                                   keyboardType: TextInputType.number,
                                 ),
                               ],
@@ -250,10 +243,10 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                       GridView.count(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        crossAxisCount: 3, // 3 columns
+                        crossAxisCount: 3,
                         crossAxisSpacing: 8,
                         mainAxisSpacing: 8,
-                        childAspectRatio: 3, // keep it wide enough for text
+                        childAspectRatio: 3,
                         children:
                             [
                               "Allergies",
@@ -302,7 +295,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                       ),
                       const SizedBox(height: 20),
 
-                      // Additional Health Details
                       Text(
                         "Additional Health Details (optional)",
                         style: GoogleFonts.poppins(
@@ -320,7 +312,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
 
                       const SizedBox(height: 24),
 
-                      // Complete Profile Button
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
@@ -347,7 +338,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
 
                       const SizedBox(height: 16),
 
-                      // Add Another Child
                       Center(
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -355,7 +345,7 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                             Icon(
                               Icons.check_circle,
                               color: AppColors.primary,
-                              size: 18, // adjust size if needed
+                              size: 18,
                             ),
                             const SizedBox(width: 6),
                             Text(
@@ -393,10 +383,9 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
     );
   }
 
-  // 🔹 Custom Poppins-styled text field
   Widget _buildTextField({
     required TextEditingController controller,
-    String? hint, // 👈 added hint support
+    String? hint,
     IconData? icon,
     TextInputType? keyboardType,
     bool readOnly = false,
@@ -434,9 +423,7 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
     );
   }
 
-  // 🔹 Custom pill button
   Widget _buildPillButton(String label, bool isSelected, VoidCallback onTap) {
-    // Assign a custom color based on label
     final Color activeColor = label == "Girl"
         ? AppColors.pink300
         : AppColors.secondary;

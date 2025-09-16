@@ -65,10 +65,8 @@ class _CharacterSelectionScreenState extends State<CharacterSelectionScreen> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
-          // ✅ Added scroll
           child: Column(
             children: [
-              // 🔹 Purple background only for header
               SizedBox(
                 height: 300,
                 width: double.infinity,
@@ -107,9 +105,8 @@ class _CharacterSelectionScreenState extends State<CharacterSelectionScreen> {
                 ),
               ),
 
-              // Character + text + arrows + button section
               Transform.translate(
-                offset: const Offset(0, -150), // shift whole block up
+                offset: const Offset(0, -150),
                 child: Column(
                   children: [
                     SizedBox(
@@ -179,7 +176,6 @@ class _CharacterSelectionScreenState extends State<CharacterSelectionScreen> {
 
                     const SizedBox(height: 24),
 
-                    // ✅ Button is now part of translated section
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: SizedBox(

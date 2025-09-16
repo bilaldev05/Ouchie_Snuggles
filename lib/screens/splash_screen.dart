@@ -27,8 +27,7 @@ class _SplashScreenState extends State<SplashScreen>
     _fadeIn = CurvedAnimation(parent: _controller, curve: Curves.easeIn);
     _controller.forward();
 
-    // Navigate after delay
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 5), () {
       context.go('/intro');
     });
   }
@@ -46,7 +45,6 @@ class _SplashScreenState extends State<SplashScreen>
     return Scaffold(
       body: Stack(
         children: [
-          // Background image
           Positioned.fill(
             child: FadeTransition(
               opacity: _fadeIn,
@@ -57,7 +55,6 @@ class _SplashScreenState extends State<SplashScreen>
             ),
           ),
 
-          // Top clouds
           Positioned(
             top: 40,
             left: 0,
@@ -75,7 +72,6 @@ class _SplashScreenState extends State<SplashScreen>
             ),
           ),
 
-          // Bottom cloud
           Positioned(
             bottom: 0,
             left: 0,
@@ -89,14 +85,12 @@ class _SplashScreenState extends State<SplashScreen>
             ),
           ),
 
-          // Center logo + tagline
           Center(
             child: FadeTransition(
               opacity: _fadeIn,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // Logo image
                   Image.asset(
                     "lib/assets/images/logo.png",
                     width: 180,
@@ -105,7 +99,6 @@ class _SplashScreenState extends State<SplashScreen>
 
                   const SizedBox(height: 20),
 
-                  // Tagline with stroke + fill
                   Stack(
                     children: [
                       Text(
@@ -138,7 +131,6 @@ class _SplashScreenState extends State<SplashScreen>
             ),
           ),
 
-          // Decorative icons
           Positioned(
             top: 250,
             left: 60,

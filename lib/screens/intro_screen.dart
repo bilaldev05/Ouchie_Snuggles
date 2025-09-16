@@ -23,19 +23,16 @@ class _IntroScreenState extends State<IntroScreen>
   void initState() {
     super.initState();
 
-    // Clouds animation (looping left-right)
     _cloudController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 6),
     )..repeat(reverse: true);
 
-    // Title fade-in
     _fadeController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
     )..forward();
 
-    // Toby bounce-in
     _tobyController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1200),
@@ -69,7 +66,6 @@ class _IntroScreenState extends State<IntroScreen>
         children: [
           IntroHeader(cloudAnim: cloudAnim, fadeAnim: _fadeController),
 
-          // --- Toby character bounce-in ---
           ScaleTransition(
             scale: CurvedAnimation(
               parent: _tobyController,
@@ -84,7 +80,6 @@ class _IntroScreenState extends State<IntroScreen>
             ),
           ),
 
-          // --- Text section ---
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
@@ -114,7 +109,6 @@ class _IntroScreenState extends State<IntroScreen>
             ),
           ),
 
-          // --- Next button ---
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(

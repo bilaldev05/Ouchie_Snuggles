@@ -25,7 +25,6 @@ class _ParentVerificationScreenState extends State<ParentVerificationScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Top banner with logo
             Align(
               alignment: Alignment.center,
               child: Padding(
@@ -38,7 +37,6 @@ class _ParentVerificationScreenState extends State<ParentVerificationScreen> {
               ),
             ),
 
-            // Content container stretched
             Expanded(
               child: Container(
                 width: double.infinity,
@@ -85,7 +83,6 @@ class _ParentVerificationScreenState extends State<ParentVerificationScreen> {
                     ),
                     const SizedBox(height: 32),
 
-                    // 🔹 Body
                     Text(
                       "Parent Verification",
                       style: GoogleFonts.poppins(

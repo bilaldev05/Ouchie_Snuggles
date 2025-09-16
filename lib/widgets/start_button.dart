@@ -9,7 +9,7 @@ class PngButton extends StatelessWidget {
     super.key,
     required this.pngAsset,
     required this.onTap,
-    this.size = 72, // default size, can override
+    this.size = 72,
   });
 
   @override

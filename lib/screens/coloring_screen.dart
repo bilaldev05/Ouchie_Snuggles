@@ -9,10 +9,8 @@ class ColoringScreen extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            /// Main Layout
             Column(
               children: [
-                // 🔹 Top Row
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16,
@@ -21,25 +19,23 @@ class ColoringScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Back Button (your PNG)
                       GestureDetector(
                         onTap: () {
                           Navigator.pop(context);
                         },
                         child: Image.asset(
-                          "lib/assets/icons/back_btn1.png", // your back button asset
+                          "lib/assets/icons/back_btn1.png",
                           width: 90,
                           height: 90,
                         ),
                       ),
 
-                      // Palette Button (your PNG)
                       GestureDetector(
                         onTap: () {
                           // open palette
                         },
                         child: Image.asset(
-                          "lib/assets/images/Object.png", // your palette button asset
+                          "lib/assets/images/Object.png",
                           width: 90,
                           height: 90,
                         ),
@@ -77,18 +73,15 @@ class ColoringScreen extends StatelessWidget {
                         ),
                       ),
 
-                      // 🔹 Center Image
                       Expanded(
                         child: Center(
                           child: Image.asset(
-                            "lib/assets/images/elephant.png", // replace with your elephant outline
+                            "lib/assets/images/elephant.png",
                             width: 220,
                             fit: BoxFit.contain,
                           ),
                         ),
                       ),
-
-                      // 🔹 Right Side Tools
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                         child: Center(
@@ -103,17 +96,13 @@ class ColoringScreen extends StatelessWidget {
                   ),
                 ),
 
-                // 🔹 Bottom Buttons
                 Padding(
                   padding: const EdgeInsets.only(bottom: 20, top: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Refresh Button (your PNG)
                       GestureDetector(
-                        onTap: () {
-                          // reset
-                        },
+                        onTap: () {},
                         child: Image.asset(
                           "lib/assets/icons/redo_btn.png",
                           width: 120,
@@ -123,7 +112,6 @@ class ColoringScreen extends StatelessWidget {
 
                       const SizedBox(width: 50),
 
-                      // Home Button (your PNG)
                       GestureDetector(
                         onTap: () {
                           Navigator.pop(context);

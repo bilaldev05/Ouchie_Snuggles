@@ -62,7 +62,6 @@ class _RegisteredCapScreenState extends State<RegisteredCapScreen> {
             ),
             const SizedBox(height: 20),
 
-            // Content based on tab
             Expanded(
               child: selectedTab == 0
                   ? ListView(
@@ -138,16 +137,13 @@ class _RegisteredCapScreenState extends State<RegisteredCapScreen> {
       ),
       child: Row(
         children: [
-          // Image
           Image.asset(image, height: 120, width: 120, fit: BoxFit.contain),
           const SizedBox(width: 16),
 
-          // Info
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Title + status
                 Row(
                   children: [
                     Expanded(
@@ -194,7 +190,6 @@ class _RegisteredCapScreenState extends State<RegisteredCapScreen> {
                 ],
                 const SizedBox(height: 8),
 
-                // Buttons stacked vertically
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

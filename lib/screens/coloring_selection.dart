@@ -11,19 +11,17 @@ class ColoringSelectionScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // 🔹 Top Row (Back + Paint)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // Back Button
                   GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
                     },
                     child: Image.asset(
-                      "lib/assets/icons/back_btn1.png", // replace with your asset
+                      "lib/assets/icons/back_btn1.png",
                       height: 80,
                       width: 80,
                     ),
@@ -31,11 +29,9 @@ class ColoringSelectionScreen extends StatelessWidget {
 
                   // Paint Palette
                   GestureDetector(
-                    onTap: () {
-                      // Handle paint action
-                    },
+                    onTap: () {},
                     child: Image.asset(
-                      "lib/assets/images/Object.png", // replace with your asset
+                      "lib/assets/images/Object.png",
                       height: 80,
                       width: 80,
                     ),
@@ -46,7 +42,6 @@ class ColoringSelectionScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // 🔹 Animal Grid
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
@@ -81,26 +76,21 @@ class ColoringSelectionScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // 🔹 Bottom Buttons (Down Arrow + Home)
             Column(
               children: [
                 GestureDetector(
-                  onTap: () {
-                    // Handle down action
-                  },
+                  onTap: () {},
                   child: Image.asset(
-                    "lib/assets/icons/arrow_down.png", // replace with your asset
+                    "lib/assets/icons/arrow_down.png",
                     height: 90,
                     width: 90,
                   ),
                 ),
                 const SizedBox(height: 20),
                 GestureDetector(
-                  onTap: () {
-                    // Handle home navigation
-                  },
+                  onTap: () {},
                   child: Image.asset(
-                    "lib/assets/icons/home_btn.png", // replace with your asset
+                    "lib/assets/icons/home_btn.png",
                     height: 70,
                     width: 70,
                   ),

@@ -7,7 +7,7 @@ class AuthOptionTile extends StatelessWidget {
   final String title;
   final String subtitle;
   final String arrowAsset;
-  final Color arrowColor; // still used for text/icon tinting if needed
+  final Color arrowColor;
   final VoidCallback onTap;
 
   const AuthOptionTile({
@@ -29,10 +29,7 @@ class AuthOptionTile extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-            color: Colors.grey.shade300, // 👈 light grey outline
-            width: 1,
-          ),
+          border: Border.all(color: Colors.grey.shade300, width: 1),
         ),
         child: Row(
           children: [

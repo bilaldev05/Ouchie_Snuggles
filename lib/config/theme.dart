@@ -2,31 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppColors {
-  // Brand Colors
   static const Color primary = Color(0xFF2659BF);
   static const Color secondary = Color(0xFF3377FF);
   static const Color tertiary = Color(0xFF99BBFF);
   static const Color background = Color(0xFFE3EDFF);
 
-  // Accent Brand Colors (for titles like "Ouchie Snuggles")
-  static const Color brandYellowDark = Color(0xFFFBC02D); // outline
-  static const Color brandYellowLight = Color(0xFFFFF59D); // fill
-  static const Color brandYellow = Color(0xFFFFEB3B); // main
+  static const Color brandYellowDark = Color(0xFFFBC02D);
+  static const Color brandYellowLight = Color(0xFFFFF59D);
+  static const Color brandYellow = Color(0xFFFFEB3B);
   static const Color accent = brandYellow;
 
-  // Extra Palette
-  static const Color pink300 = Color(0xFFF06292); // ✅ Pink-300
+  static const Color pink300 = Color(0xFFF06292);
 
-  // Secondary Palette
   static const Color error = Color(0xFFFF3B3B);
 
-  // Text Colors
   static const Color textPrimary = Color(0xFF3A3A3C);
   static const Color textSecondary = Color(0xFF6B7588);
   static const Color textTertiary = Color(0xFF8F90A6);
   static const Color textDisabled = Color(0xFFC7C9D9);
 
-  // State Colors
   static const Color success = Color(0xFF06C270);
   static const Color info = Color(0xFF0063F7);
 }

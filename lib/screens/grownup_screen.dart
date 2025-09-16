@@ -42,11 +42,10 @@ class _GrownUpScreenState extends State<GrownUpScreen>
       body: SafeArea(
         child: Column(
           children: [
-            // --- Logo ---
             Align(
               alignment: Alignment.center,
               child: Padding(
-                padding: const EdgeInsets.only(top: 40), // adjust value
+                padding: const EdgeInsets.only(top: 40),
                 child: FadeTransition(
                   opacity: _fadeAnim,
                   child: Image.asset(
@@ -58,7 +57,6 @@ class _GrownUpScreenState extends State<GrownUpScreen>
               ),
             ),
 
-            // --- White container ---
             Expanded(
               flex: 4,
               child: Container(
@@ -95,7 +93,6 @@ class _GrownUpScreenState extends State<GrownUpScreen>
                       ),
                       const SizedBox(height: 24),
 
-                      // ✅ Call your widget here
                       AuthOptionTile(
                         svgIconPath: "lib/assets/icons/keypad.svg",
                         title: "Set up PIN code",
@@ -160,7 +157,6 @@ class _GrownUpScreenState extends State<GrownUpScreen>
 
                       const SizedBox(height: 32),
 
-                      // Cancel Button
                       Center(
                         child: OutlinedButton(
                           onPressed: () {},
@@ -171,7 +167,7 @@ class _GrownUpScreenState extends State<GrownUpScreen>
                             ),
                             side: const BorderSide(
                               color: AppColors.textTertiary,
-                            ), // grey outline
+                            ),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),

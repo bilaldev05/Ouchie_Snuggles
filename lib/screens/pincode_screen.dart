@@ -59,7 +59,6 @@ class _SetPinCodeScreenState extends State<SetPinCodeScreen>
 
           const Spacer(),
 
-          // White rounded container
           Container(
             width: double.infinity,
             constraints: const BoxConstraints(maxHeight: 720),
@@ -71,7 +70,6 @@ class _SetPinCodeScreenState extends State<SetPinCodeScreen>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Close button row
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -87,7 +85,6 @@ class _SetPinCodeScreenState extends State<SetPinCodeScreen>
                 ),
                 const SizedBox(height: 8),
 
-                // Title
                 Text(
                   "Setting up",
                   style: GoogleFonts.poppins(
@@ -107,7 +104,6 @@ class _SetPinCodeScreenState extends State<SetPinCodeScreen>
                 ),
                 const SizedBox(height: 12),
 
-                // Description
                 Text(
                   "To set up your PIN enter 4-digit code and then confirm it below.",
                   style: GoogleFonts.poppins(
@@ -118,7 +114,6 @@ class _SetPinCodeScreenState extends State<SetPinCodeScreen>
                 ),
                 const SizedBox(height: 20),
 
-                // Pin Input
                 Text(
                   "PIN Code",
                   style: GoogleFonts.poppins(
@@ -179,7 +174,6 @@ class _SetPinCodeScreenState extends State<SetPinCodeScreen>
 
                 const SizedBox(height: 24),
 
-                // Set PIN Button
                 SizedBox(
                   width: double.infinity,
                   height: 50,
@@ -207,7 +201,6 @@ class _SetPinCodeScreenState extends State<SetPinCodeScreen>
 
                 const Spacer(),
 
-                // Footer note
                 Center(
                   child: Text(
                     "⚙️ You can change PIN code from settings menu",

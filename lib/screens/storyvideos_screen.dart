@@ -11,13 +11,11 @@ class StoryVideosScreen extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            /// 🔹 Top buttons
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // Back Button
                   GestureDetector(
                     onTap: () => Navigator.pop(context),
                     child: Image.asset(
@@ -26,11 +24,9 @@ class StoryVideosScreen extends StatelessWidget {
                       height: 90,
                     ),
                   ),
-                  // Camera / Palette Button
+
                   GestureDetector(
-                    onTap: () {
-                      // Handle camera/palette
-                    },
+                    onTap: () {},
                     child: Image.asset(
                       "lib/assets/images/camera.png",
                       width: 90,
@@ -41,12 +37,10 @@ class StoryVideosScreen extends StatelessWidget {
               ),
             ),
 
-            /// 🔹 Story Cards (center)
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // First Row
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -77,11 +71,8 @@ class StoryVideosScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
 
-                  // Down Arrow Button
                   GestureDetector(
-                    onTap: () {
-                      // Handle next scroll/page
-                    },
+                    onTap: () {},
                     child: Image.asset(
                       "lib/assets/icons/arrow_down.png",
                       width: 90,
@@ -92,15 +83,12 @@ class StoryVideosScreen extends StatelessWidget {
               ),
             ),
 
-            /// 🔹 Bottom Home Button
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20),
                 child: GestureDetector(
-                  onTap: () {
-                    // Go home
-                  },
+                  onTap: () {},
                   child: Image.asset(
                     "lib/assets/icons/home_btn.png",
                     width: 90,

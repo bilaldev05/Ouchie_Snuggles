@@ -38,7 +38,6 @@ class ArticleDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // --- Title ---
             Text(
               "Helping Children Express Pain, One Step at a time",
               style: GoogleFonts.poppins(
@@ -49,7 +48,6 @@ class ArticleDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // --- Header Image ---
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(
@@ -60,7 +58,6 @@ class ArticleDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // --- Author Info ---
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -94,7 +91,6 @@ class ArticleDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // --- Article Body ---
             Text(
               "Helping a child express pain builds trust and emotional health. "
               "Encourage them to use words, drawings, or gestures to describe feelings. "
@@ -111,7 +107,6 @@ class ArticleDetailScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // --- Feedback Section ---
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(16),

@@ -27,7 +27,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Top banner with logo
             Align(
               alignment: Alignment.center,
               child: Padding(
@@ -40,7 +39,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
               ),
             ),
 
-            // Content container
             Container(
               width: double.infinity,
               margin: const EdgeInsets.only(top: 32),
@@ -73,7 +71,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
 
                   const SizedBox(height: 20),
 
-                  // Step indicator
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -97,7 +94,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
 
                   const SizedBox(height: 30),
 
-                  // Form title
                   Text(
                     "Parent Information",
                     style: GoogleFonts.poppins(
@@ -108,7 +104,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
                   ),
                   const SizedBox(height: 10),
 
-                  // Parent/Caretaker Name
                   _buildTextField(
                     label: "Parent/Caretaker Name",
                     hint: "Alex Lee",
@@ -117,7 +112,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
                   ),
                   const SizedBox(height: 16),
 
-                  // Email Address
                   _buildTextField(
                     label: "Email Address",
                     hint: "AlexLee@gmail.com",
@@ -126,7 +120,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
                   ),
                   const SizedBox(height: 16),
 
-                  // Create Password
                   _buildPasswordField(
                     label: "Create Password",
                     obscureText: _obscurePassword,
@@ -148,7 +141,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
 
                   const SizedBox(height: 20),
 
-                  // Parental Verification Box
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
@@ -190,7 +182,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
 
                   const SizedBox(height: 20),
 
-                  // Checkboxes
                   _buildCheckbox(
                     value: isAdultConfirmed,
                     onChanged: (val) =>
@@ -234,7 +225,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
 
                   const SizedBox(height: 20),
 
-                  // Create button
                   SizedBox(
                     width: double.infinity,
                     height: 50,
@@ -261,7 +251,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
 
                   const SizedBox(height: 20),
 
-                  // Social sign in
                   Row(
                     children: [
                       const Expanded(child: Divider()),
@@ -320,7 +309,6 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
 
                   const SizedBox(height: 20),
 
-                  // Already have account
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -443,7 +431,7 @@ class _ParentSignUpScreenState extends State<ParentSignUpScreen> {
     required ThemeData theme,
   }) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.center, // center with checkbox
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Checkbox(
           value: value,

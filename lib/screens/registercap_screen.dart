@@ -48,26 +48,21 @@ class RegisterCapScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // --- QR Scan Box ---
-            // --- QR Scan Box with dotted image ---
             Container(
-              height: 250, // reduced height
+              height: 250,
               width: double.infinity,
-              margin: const EdgeInsets.symmetric(
-                horizontal: 32,
-              ), // side margins
+              margin: const EdgeInsets.symmetric(horizontal: 32),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 image: const DecorationImage(
                   image: AssetImage("lib/assets/images/scan.png"),
-                  fit: BoxFit.contain, // keeps dotted frame proportion
+                  fit: BoxFit.contain,
                 ),
               ),
             ),
 
             const SizedBox(height: 24),
 
-            // --- Instructions ---
             Column(
               children: [
                 Image.asset(
@@ -90,7 +85,6 @@ class RegisterCapScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // --- Info Box ---
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -120,7 +114,6 @@ class RegisterCapScreen extends StatelessWidget {
             ),
             const SizedBox(height: 32),
 
-            // --- Scan Button ---
             SizedBox(
               width: double.infinity,
               height: 50,
@@ -147,7 +140,6 @@ class RegisterCapScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12),
 
-            // --- Cancel Button ---
             TextButton(
               onPressed: () => Navigator.pop(context),
               child: Text(

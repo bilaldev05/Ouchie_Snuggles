@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ouchie_snuggles/config/theme.dart';
 
-/// Circle with optional label (uses _buildStepCircle style)
 Widget buildStepCircle(
   String number,
   ThemeData theme, {

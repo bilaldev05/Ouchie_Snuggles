@@ -25,25 +25,21 @@ class _IntroKosmoScreenState extends State<IntroKosmoScreen>
   void initState() {
     super.initState();
 
-    // Clouds animation (looping left-right)
     _cloudController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 6),
     )..repeat(reverse: true);
 
-    // Title fade-in
     _fadeController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
     )..forward();
 
-    // Toby bounce-in
     _tobyController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1200),
     )..forward();
 
-    // Button scale-in
     _buttonController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 800),
@@ -70,7 +66,7 @@ class _IntroKosmoScreenState extends State<IntroKosmoScreen>
       body: Stack(
         children: [
           IntroHeader(cloudAnim: cloudAnim, fadeAnim: _fadeController),
-          // --- Toby character bounce-in ---
+
           ScaleTransition(
             scale: CurvedAnimation(
               parent: _tobyController,
@@ -85,7 +81,6 @@ class _IntroKosmoScreenState extends State<IntroKosmoScreen>
             ),
           ),
 
-          // --- Text section ---
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
@@ -115,7 +110,6 @@ class _IntroKosmoScreenState extends State<IntroKosmoScreen>
             ),
           ),
 
-          // --- Next button ---
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(

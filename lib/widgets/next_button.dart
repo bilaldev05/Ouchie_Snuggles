@@ -18,7 +18,6 @@ class NextButton extends StatelessWidget {
       onTap: onTap,
       child: Image.asset(pngAsset, width: 72, height: 72, fit: BoxFit.contain),
     );
-
     if (animationController != null) {
       return ScaleTransition(
         scale: CurvedAnimation(

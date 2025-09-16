@@ -42,11 +42,10 @@ class _GrownUpModeScreenState extends State<GrownUpModeScreen>
       body: SafeArea(
         child: Column(
           children: [
-            // --- Logo ---
             Align(
               alignment: Alignment.center,
               child: Padding(
-                padding: const EdgeInsets.only(top: 40), // adjust value
+                padding: const EdgeInsets.only(top: 40),
                 child: FadeTransition(
                   opacity: _fadeAnim,
                   child: Image.asset(
@@ -58,7 +57,6 @@ class _GrownUpModeScreenState extends State<GrownUpModeScreen>
               ),
             ),
 
-            // --- White container ---
             Expanded(
               flex: 4,
               child: Container(
@@ -95,7 +93,6 @@ class _GrownUpModeScreenState extends State<GrownUpModeScreen>
                       ),
                       const SizedBox(height: 24),
 
-                      // ✅ Call your widget here
                       AuthOptionTile(
                         svgIconPath: "lib/assets/icons/keypad.svg",
                         title: "Enter Pin ",
@@ -158,7 +155,6 @@ class _GrownUpModeScreenState extends State<GrownUpModeScreen>
 
                       const SizedBox(height: 32),
 
-                      // Cancel Button
                       Center(
                         child: OutlinedButton(
                           onPressed: () {},

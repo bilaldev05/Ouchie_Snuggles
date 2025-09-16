@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StoryPlayerScreen extends StatelessWidget {
@@ -12,7 +13,6 @@ class StoryPlayerScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Top bar with Back + Camera
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Row(
@@ -21,17 +21,15 @@ class StoryPlayerScreen extends StatelessWidget {
                   GestureDetector(
                     onTap: () => Navigator.pop(context),
                     child: Image.asset(
-                      "lib/assets/icons/back_btn1.png", // your yellow back asset
+                      "lib/assets/icons/back_btn1.png",
                       width: 90,
                       height: 90,
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      // open camera / gallery
-                    },
+                    onTap: () {},
                     child: Image.asset(
-                      "lib/assets/images/camera.png", // your purple camera asset
+                      "lib/assets/images/camera.png",
                       width: 90,
                       height: 90,
                     ),
@@ -42,7 +40,6 @@ class StoryPlayerScreen extends StatelessWidget {
 
             const SizedBox(height: 10),
 
-            // Story Title
             Text(
               "Why do we get\nsick?",
               style: GoogleFonts.poppins(
@@ -55,11 +52,9 @@ class StoryPlayerScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // Toby Card (Dog illustration with play button)
             Stack(
               alignment: Alignment.center,
               children: [
-                // Dog image (Toby card)
                 Image.asset(
                   "lib/assets/images/Image.png",
                   width: 370,
@@ -67,14 +62,13 @@ class StoryPlayerScreen extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
 
-                // Play button overlay (asset image)
                 GestureDetector(
                   onTap: () {
-                    // handle play action
+                    context.go('/relax');
                   },
                   child: Image.asset(
-                    "lib/assets/icons/play.png", // your play button asset
-                    width: 70, // adjust size as needed
+                    "lib/assets/icons/play.png",
+                    width: 70,
                     height: 70,
                   ),
                 ),
@@ -83,9 +77,8 @@ class StoryPlayerScreen extends StatelessWidget {
 
             const Spacer(),
 
-            // Bottom Player Controls (single PNG / animation asset)
             Image.asset(
-              "lib/assets/images/playbutton.png", // bottom animation PNG
+              "lib/assets/images/playbutton.png",
               width: double.infinity,
               fit: BoxFit.contain,
             ),

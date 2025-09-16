@@ -37,7 +37,6 @@ class _RemindersScreenState extends State<RemindersScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Tabs
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Row(
@@ -52,7 +51,6 @@ class _RemindersScreenState extends State<RemindersScreen> {
           ),
           const SizedBox(height: 16),
 
-          // Reminder list
           Expanded(
             child: ListView(
               padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -120,7 +118,6 @@ class _RemindersScreenState extends State<RemindersScreen> {
       ),
       child: Row(
         children: [
-          // Status Circle
           Container(
             height: 20,
             width: 20,
@@ -134,7 +131,6 @@ class _RemindersScreenState extends State<RemindersScreen> {
           ),
           const SizedBox(width: 12),
 
-          // Info
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

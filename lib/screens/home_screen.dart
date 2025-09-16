@@ -52,7 +52,6 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // --- Quick Actions ---
             Text(
               "Quick Actions",
               style: GoogleFonts.poppins(
@@ -63,12 +62,12 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             GridView.count(
-              crossAxisCount: 2, // 2 columns
+              crossAxisCount: 2,
               shrinkWrap: true,
-              crossAxisSpacing: 0, // minimal gap
-              mainAxisSpacing: 0, // minimal gap
+              crossAxisSpacing: 0,
+              mainAxisSpacing: 0,
               physics: const NeverScrollableScrollPhysics(),
-              childAspectRatio: 1.0, // perfect squares
+              childAspectRatio: 1.0,
               children: [
                 InkWell(
                   onTap: () {
@@ -91,9 +90,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {
-                    // TODO: Navigate or perform action
-                  },
+                  onTap: () {},
                   borderRadius: BorderRadius.circular(12),
                   child: const _QuickAction(
                     icon: Icons.card_giftcard,
@@ -101,9 +98,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {
-                    // TODO: Navigate or perform action
-                  },
+                  onTap: () {},
                   borderRadius: BorderRadius.circular(12),
                   child: const _QuickAction(
                     icon: Icons.tips_and_updates_outlined,
@@ -115,7 +110,6 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // --- Your Children’s Cap ---
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -160,7 +154,6 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // --- Maintenance Reminders ---
             Text(
               "Maintenance Reminders",
               style: GoogleFonts.poppins(
@@ -182,7 +175,6 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 8),
 
-            // --- Full-width See All button ---
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -207,7 +199,6 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // --- Featured Articles ---
             Text(
               "Featured Articles",
               style: GoogleFonts.poppins(
@@ -234,9 +225,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   InkWell(
-                    onTap: () {
-                      // TODO: Navigate or perform action
-                    },
+                    onTap: () {},
                     borderRadius: BorderRadius.circular(16),
                     child: const _ArticleCard(
                       title: "Bedtime Comfort for little ones",
@@ -260,12 +249,11 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12),
 
-            // replace the SwitchListTile widgets with these ListTiles
             ListTile(
               contentPadding: EdgeInsets.zero,
               title: Text("Captions", style: GoogleFonts.poppins()),
               trailing: Transform.scale(
-                scale: 0.78, // tweak this between ~0.6-0.9 as desired
+                scale: 0.78,
                 child: Switch(
                   value: true,
                   onChanged: (_) {},
@@ -347,7 +335,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// --- Quick Action ---
 class _QuickAction extends StatelessWidget {
   final IconData icon;
   final String label;
@@ -375,7 +362,6 @@ class _QuickAction extends StatelessWidget {
   }
 }
 
-// --- Child Cap Card ---
 class _ChildCapCard extends StatelessWidget {
   final String name, capType, lastUsed, frequency, image;
 
@@ -393,7 +379,7 @@ class _ChildCapCard extends StatelessWidget {
 
     return SizedBox(
       width: 160,
-      height: 500, // now actually respected
+      height: 500,
       child: Container(
         decoration: BoxDecoration(
           color: colors.surface,
@@ -423,7 +409,6 @@ class _ChildCapCard extends StatelessWidget {
               ),
             ),
 
-            // 🔑 This Expanded will take the *remaining height*
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(8),
@@ -463,7 +448,6 @@ class _ChildCapCard extends StatelessWidget {
   }
 }
 
-// --- Reminder Tile ---
 class _ReminderTile extends StatelessWidget {
   final String title, subtitle;
 
@@ -491,7 +475,6 @@ class _ReminderTile extends StatelessWidget {
   }
 }
 
-// --- Article Card ---
 class _ArticleCard extends StatelessWidget {
   final String title, subtitle, image;
 

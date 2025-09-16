@@ -38,7 +38,6 @@ class _EnterPinScreenState extends State<EnterPinScreen>
       if (value == "back") {
         if (pin.isNotEmpty) pin = pin.substring(0, pin.length - 1);
       } else if (value == "done") {
-        // TODO: handle PIN submit
       } else {
         if (pin.length < 4) pin += value;
       }
@@ -53,7 +52,6 @@ class _EnterPinScreenState extends State<EnterPinScreen>
       backgroundColor: theme.colorScheme.primary,
       body: Column(
         children: [
-          // --- Logo ---
           Align(
             alignment: Alignment.center,
             child: Padding(
@@ -71,7 +69,6 @@ class _EnterPinScreenState extends State<EnterPinScreen>
 
           const Spacer(),
 
-          // --- White Container ---
           Container(
             width: double.infinity,
             constraints: const BoxConstraints(maxHeight: 720),
@@ -84,7 +81,6 @@ class _EnterPinScreenState extends State<EnterPinScreen>
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                // Close button
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -107,7 +103,6 @@ class _EnterPinScreenState extends State<EnterPinScreen>
                 ),
                 const SizedBox(height: 6),
 
-                // Subtitle
                 Text(
                   "Please enter your 4-digit code",
                   style: GoogleFonts.poppins(
@@ -118,7 +113,6 @@ class _EnterPinScreenState extends State<EnterPinScreen>
                 ),
                 const SizedBox(height: 24),
 
-                // PIN Dots
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(4, (index) {
@@ -136,7 +130,6 @@ class _EnterPinScreenState extends State<EnterPinScreen>
                 ),
                 const SizedBox(height: 32),
 
-                // Number Pad
                 GridView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),

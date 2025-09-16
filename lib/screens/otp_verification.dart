@@ -25,7 +25,6 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Top banner with logo
             Align(
               alignment: Alignment.center,
               child: Padding(
@@ -38,7 +37,6 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
               ),
             ),
 
-            // Content container
             Expanded(
               child: Container(
                 width: double.infinity,
@@ -95,7 +93,6 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                     ),
                     const SizedBox(height: 32),
 
-                    // 🔹 Body
                     Text(
                       "Parent Verification",
                       style: GoogleFonts.poppins(
@@ -114,7 +111,6 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                     ),
                     const SizedBox(height: 20),
 
-                    // OTP input boxes
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: List.generate(6, (index) {
@@ -203,10 +199,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.primary,
                               ),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () {
-                                  // Navigate back to phone entry
-                                },
+                              recognizer: TapGestureRecognizer()..onTap = () {},
                             ),
                           ],
                         ),

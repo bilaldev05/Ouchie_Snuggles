@@ -9,11 +9,10 @@ class JourneyScreen extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     return Scaffold(
-      backgroundColor: colors.background, // use theme background
+      backgroundColor: colors.background,
       body: SafeArea(
         child: Stack(
           children: [
-            /// --- Wavy Background ---
             Positioned.fill(
               child: Image.asset(
                 "lib/assets/images/wavy_bg.png",
@@ -21,13 +20,11 @@ class JourneyScreen extends StatelessWidget {
               ),
             ),
 
-            /// --- Main Content ---
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 16),
 
-                /// Header Row
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
@@ -60,7 +57,6 @@ class JourneyScreen extends StatelessWidget {
                 Expanded(
                   child: Row(
                     children: [
-                      /// --- Progress Bar ---
                       Padding(
                         padding: const EdgeInsets.only(left: 16, top: 24),
                         child: Column(
@@ -75,7 +71,7 @@ class JourneyScreen extends StatelessWidget {
                                 child: Align(
                                   alignment: Alignment.bottomCenter,
                                   child: Container(
-                                    height: 200, // adjust to show progress
+                                    height: 200,
                                     decoration: BoxDecoration(
                                       color: colors.primary,
                                       borderRadius: BorderRadius.circular(12),
@@ -92,11 +88,9 @@ class JourneyScreen extends StatelessWidget {
                         ),
                       ),
 
-                      /// --- Journey Path ---
                       Expanded(
                         child: Stack(
                           children: [
-                            /// Dotted Path
                             Positioned.fill(
                               child: Image.asset(
                                 "lib/assets/images/track.png",
@@ -104,7 +98,6 @@ class JourneyScreen extends StatelessWidget {
                               ),
                             ),
 
-                            /// Dogs & Chests placed along path
                             Positioned(
                               top: 80,
                               right: 40,
@@ -152,7 +145,6 @@ class JourneyScreen extends StatelessWidget {
                   ),
                 ),
 
-                /// Bottom Action Bar
                 Container(
                   margin: const EdgeInsets.all(16),
                   padding: const EdgeInsets.symmetric(

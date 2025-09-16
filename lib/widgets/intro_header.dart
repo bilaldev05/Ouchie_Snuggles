@@ -19,7 +19,6 @@ class IntroHeader extends StatelessWidget {
             flex: 3,
             child: Stack(
               children: [
-                // --- Purple Background ---
                 Container(
                   decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.primary,
@@ -30,11 +29,10 @@ class IntroHeader extends StatelessWidget {
                   ),
                 ),
 
-                // --- Background hills/shape ---
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Transform.translate(
-                    offset: const Offset(0, 350), // push down
+                    offset: const Offset(0, 350),
                     child: Transform.scale(
                       scale: 2.1, // bigger
                       child: Image.asset(
@@ -46,7 +44,6 @@ class IntroHeader extends StatelessWidget {
                   ),
                 ),
 
-                // --- Clouds ---
                 AnimatedBuilder(
                   animation: cloudAnim,
                   builder: (_, child) {
@@ -73,7 +70,6 @@ class IntroHeader extends StatelessWidget {
                   ),
                 ),
 
-                // --- Title (Logo fade-in) ---
                 Align(
                   alignment: const Alignment(0, -0.6),
                   child: FadeTransition(
@@ -89,7 +85,6 @@ class IntroHeader extends StatelessWidget {
             ),
           ),
 
-          // White bottom section
           const Expanded(flex: 4, child: ColoredBox(color: Colors.white)),
         ],
       ),

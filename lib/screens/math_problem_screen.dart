@@ -18,7 +18,6 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
       if (value == "clear") {
         answer = "";
       } else if (value == "done") {
-        // Handle answer submit
         debugPrint("Answer submitted: $answer");
       } else {
         answer += value;
@@ -35,7 +34,6 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // --- Header (Logo) ---
             Padding(
               padding: const EdgeInsets.only(top: 16, bottom: 16),
               child: Center(
@@ -47,7 +45,6 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
               ),
             ),
 
-            // --- White Card Content ---
             Expanded(
               child: Container(
                 width: double.infinity,
@@ -58,7 +55,6 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
                 padding: const EdgeInsets.all(24),
                 child: Column(
                   children: [
-                    // Close button
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -71,7 +67,6 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
                     ),
                     const SizedBox(height: 8),
 
-                    // Title
                     Text(
                       "Solve Math Problem",
                       style: GoogleFonts.poppins(
@@ -82,7 +77,6 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
                     ),
                     const SizedBox(height: 6),
 
-                    // Subtitle
                     Text(
                       "Calculate the answer",
                       style: GoogleFonts.poppins(
@@ -93,7 +87,6 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
                     ),
                     const SizedBox(height: 24),
 
-                    // Equation Card (pale brand-yellow)
                     Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 24,
@@ -114,7 +107,6 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
                     ),
                     const SizedBox(height: 20),
 
-                    // Answer Input (outlined with brand yellow)
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
@@ -139,7 +131,6 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
                     ),
                     const SizedBox(height: 32),
 
-                    // Number Pad
                     GridView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
@@ -208,15 +199,10 @@ class _MathProblemScreenState extends State<MathProblemScreen> {
 
                     const Spacer(),
 
-                    // Footer
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(
-                          Icons.lock,
-                          size: 16,
-                          color: Colors.grey,
-                        ), // subtle grey icon
+                        const Icon(Icons.lock, size: 16, color: Colors.grey),
                         const SizedBox(width: 6),
                         Text(
                           "Unsure? Try another way to login to your account",

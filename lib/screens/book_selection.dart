@@ -12,13 +12,11 @@ class BookSelectionScreen extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            /// --- Main Content ---
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: 16),
 
-                /// --- Top Buttons Row ---
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Row(
@@ -41,7 +39,6 @@ class BookSelectionScreen extends StatelessWidget {
 
                 const SizedBox(height: 54),
 
-                /// --- Grid of Books ---
                 Expanded(
                   child: GridView.count(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -69,7 +66,6 @@ class BookSelectionScreen extends StatelessWidget {
                   ),
                 ),
 
-                /// --- Bottom Buttons ---
                 Padding(
                   padding: const EdgeInsets.only(bottom: 24),
                   child: Column(
@@ -96,7 +92,6 @@ class BookSelectionScreen extends StatelessWidget {
     );
   }
 
-  /// --- Book Card Widget ---
   Widget _bookCard({required Color color, required String image}) {
     return Container(
       decoration: BoxDecoration(
@@ -120,7 +115,6 @@ class BookSelectionScreen extends StatelessWidget {
     );
   }
 
-  /// --- Round Button (Nav buttons, top & bottom) ---
   Widget _roundButton(String asset, {required VoidCallback onTap}) {
     return InkWell(
       onTap: onTap,

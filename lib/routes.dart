@@ -1,6 +1,11 @@
 import 'package:go_router/go_router.dart';
+import 'package:ouchie_snuggles/screens/bravery_story.dart';
+import 'package:ouchie_snuggles/screens/bravestar_screen.dart';
+import 'package:ouchie_snuggles/screens/games_menu.dart';
+import 'package:ouchie_snuggles/screens/stickerbook.dart';
 import 'package:ouchie_snuggles/screens/article_screen.dart';
 import 'package:ouchie_snuggles/screens/book_selection.dart';
+import 'package:ouchie_snuggles/screens/breathtulip_screen.dart';
 import 'package:ouchie_snuggles/screens/character_selection.dart';
 import 'package:ouchie_snuggles/screens/child_profile.dart';
 import 'package:ouchie_snuggles/screens/coloring_screen.dart';
@@ -19,15 +24,18 @@ import 'package:ouchie_snuggles/screens/lesson_complete.dart';
 import 'package:ouchie_snuggles/screens/logcap_screen.dart';
 import 'package:ouchie_snuggles/screens/manage_cap_screen.dart';
 import 'package:ouchie_snuggles/screens/math_problem_screen.dart';
+import 'package:ouchie_snuggles/screens/music_player.dart';
+import 'package:ouchie_snuggles/screens/nature_screen.dart';
 import 'package:ouchie_snuggles/screens/otp_verification.dart';
 import 'package:ouchie_snuggles/screens/parent_signup.dart';
 import 'package:ouchie_snuggles/screens/parent_verification.dart';
 import 'package:ouchie_snuggles/screens/pincode_screen.dart';
+import 'package:ouchie_snuggles/screens/rain_screen.dart';
 import 'package:ouchie_snuggles/screens/registercap_screen.dart';
 import 'package:ouchie_snuggles/screens/registeredcap_screen.dart';
+import 'package:ouchie_snuggles/screens/relax_screen.dart';
 import 'package:ouchie_snuggles/screens/reminders_screen.dart';
 import 'package:ouchie_snuggles/screens/reward_screen.dart';
-
 import 'package:ouchie_snuggles/screens/splash_screen.dart';
 import 'package:ouchie_snuggles/screens/story_screen.dart';
 import 'package:ouchie_snuggles/screens/storyplayer_screen.dart';
@@ -150,5 +158,32 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const StoryPlayerScreen(),
     ),
     GoRoute(path: '/reward', builder: (context, state) => const RewardScreen()),
+    GoRoute(path: '/relax', builder: (context, state) => const RelaxScreen()),
+    GoRoute(
+      path: '/music',
+      builder: (context, state) => const MusicPlayerScreen(),
+    ),
+    GoRoute(path: '/rain', builder: (context, state) => const RainScreen()),
+    GoRoute(path: '/nature', builder: (context, state) => const NatureScreen()),
+    GoRoute(
+      path: '/breath',
+      builder: (context, state) => const BreathtulipScreen(),
+    ),
+    GoRoute(
+      path: '/sticker',
+      builder: (context, state) => const StickerBookScreen(),
+    ),
+    GoRoute(
+      path: '/bravery',
+      builder: (context, state) => const BraveryStoryScreen(),
+    ),
+    GoRoute(
+      path: '/bravestar',
+      builder: (context, state) => const BraveStarScreen(),
+    ),
+    GoRoute(
+      path: '/games',
+      builder: (context, state) => const GamesMenuScreen(),
+    ),
   ],
 );

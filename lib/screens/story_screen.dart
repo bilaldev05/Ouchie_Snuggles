@@ -36,7 +36,6 @@ class StoryScreen extends StatelessWidget {
             height: 450,
             child: Stack(
               children: [
-                // Top centered image
                 Align(
                   alignment: Alignment.topCenter,
                   child: Image.asset(
@@ -46,7 +45,6 @@ class StoryScreen extends StatelessWidget {
                   ),
                 ),
 
-                // Back button
                 Positioned(
                   top: 20,
                   left: 6,
@@ -65,7 +63,7 @@ class StoryScreen extends StatelessWidget {
 
           Expanded(
             child: Transform.translate(
-              offset: const Offset(0, -150), // keep card moved up
+              offset: const Offset(0, -150),
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
@@ -76,10 +74,7 @@ class StoryScreen extends StatelessWidget {
                   ),
                 ),
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.only(
-                    bottom:
-                        200, // ✅ extra space so text is visible above play button
-                  ),
+                  padding: const EdgeInsets.only(bottom: 200),
                   child: RichText(
                     text: TextSpan(
                       children: [

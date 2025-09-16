@@ -10,14 +10,12 @@ class KidsDashboardScreen extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     return Scaffold(
-      backgroundColor: const Color(0xFF9B6DCC), // Purple background
+      backgroundColor: const Color(0xFF9B6DCC),
       body: SafeArea(
         child: Stack(
           children: [
-            /// --- Background Images Layer ---
             Stack(
               children: [
-                // Multiple clouds placed in background
                 Positioned(
                   top: 20,
                   left: 30,
@@ -46,7 +44,6 @@ class KidsDashboardScreen extends StatelessWidget {
                   ),
                 ),
 
-                // Your existing Positioned.fill for rainbow + bottom animation
                 Positioned.fill(
                   child: Column(
                     children: [
@@ -84,12 +81,10 @@ class KidsDashboardScreen extends StatelessWidget {
               ],
             ),
 
-            /// --- Foreground Content Layer ---
             Column(
               children: [
                 const SizedBox(height: 16),
 
-                // Profile / Progress Bar
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Container(
@@ -137,7 +132,6 @@ class KidsDashboardScreen extends StatelessWidget {
 
                 const SizedBox(height: 24),
 
-                // 4 Category Cards
                 Expanded(
                   child: GridView.count(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -169,7 +163,6 @@ class KidsDashboardScreen extends StatelessWidget {
                   ),
                 ),
 
-                // Bottom Buttons
                 Padding(
                   padding: const EdgeInsets.only(bottom: 24),
                   child: Container(
@@ -189,8 +182,7 @@ class KidsDashboardScreen extends StatelessWidget {
                       ],
                     ),
                     child: Row(
-                      mainAxisSize:
-                          MainAxisSize.min, // shrink width to fit icons
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         _buildBottomButton(
                           "lib/assets/icons/home_btn.png",

@@ -9,19 +9,17 @@ class RewardScreen extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: theme.colorScheme.primary, // use theme color
+      backgroundColor: theme.colorScheme.primary,
 
       body: Stack(
         alignment: Alignment.center,
         children: [
-          Container(
-            color: theme.colorScheme.primary, // use theme color
-          ),
+          Container(color: theme.colorScheme.primary),
 
           Center(
             child: Image.asset(
               "lib/assets/images/reward.png",
-              height: 600, // control card size
+              height: 600,
               fit: BoxFit.contain,
             ),
           ),
